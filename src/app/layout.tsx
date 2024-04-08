@@ -1,9 +1,7 @@
-import DraftModeBanner from "@/components/DraftModeBanner";
 import Heading from "@/components/Heading";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { draftMode } from "next/headers";
 import Link from "next/link";
 import "./globals.css";
 
@@ -27,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={bodyClassName}>
-        {draftMode().isEnabled && <DraftModeBanner />}
         <header className="container mx-auto p-8 border-b border-neutral-700">
           <Heading level={1}>
             <Link href="/">⚽️ BallerBase</Link>
