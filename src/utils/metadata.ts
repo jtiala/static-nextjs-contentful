@@ -1,7 +1,9 @@
+export const siteTitle = "BallerBase";
+
 export function generateTitle(pageTitle?: string) {
   if (!pageTitle || pageTitle.length === 0) {
-    return "BallerBase";
+    return siteTitle;
   }
 
-  return `${pageTitle} | BallerBase`;
+  return `${pageTitle} | ${siteTitle}`;
 }
