@@ -22,7 +22,7 @@ contentful space export --space-id=CONTENTFUL_SPACE_ID --management-token=CONTEN
 
 ## Running the site locally
 
-First, copy `.env.local.example` as `.env.local` and fill in your API keys from Contentful. If you want to include unpublished content in your build, set `CONTENTFUL_INCLUDE_UNPUBLISHED=true`. `BASE_PATH` should be left empty for local builds.
+First, copy `.env.local.example` as `.env.local` and fill in your API keys from Contentful. If you want to include unpublished content in your build, set `CONTENTFUL_CONTENT_PREVIEW=true`. `BASE_PATH` should be left empty for local builds.
 
 Then, run the development server:
 
@@ -56,7 +56,7 @@ npm run generate-types
 
 ## Setting up content preview in Contentful
 
-In Contentful, go to `Settings -> Content preview`. Set the preview mode to `Preview in new tab`. Next, click `Add content preview`. Check all the content types and set URLs like this for each content type: `http://localhost:3000/[CONTENT_TYPE_ID in plural]/{entry.sys.id}`. Now you should be able to open unpublished content in localhost, just make sure that you have set the `CONTENTFUL_INCLUDE_UNPUBLISHED` as `true` and that the dev server or static build preview is running.
+In Contentful, go to `Settings -> Content preview`. Set the preview mode to `Preview in new tab`. Next, click `Add content preview`. Check all the content types and set URLs like this for each content type: `http://localhost:3000/[CONTENT_TYPE_ID in plural]/{entry.sys.id}`. Now you should be able to open unpublished content in localhost, just make sure that you have set the `CONTENTFUL_CONTENT_PREVIEW` as `true` and that the dev server or static build preview is running.
 
 ## Triggering GitHub Actions workflow when content changes in Contentful
 

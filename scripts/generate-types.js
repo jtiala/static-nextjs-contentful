@@ -12,7 +12,8 @@ function getBinFile(cmd) {
 
 if (
   !process.env.CONTENTFUL_SPACE_ID ||
-  !process.env.CONTENTFUL_MANAGEMENT_TOKEN
+  !process.env.CONTENTFUL_MANAGEMENT_TOKEN ||
+  !process.env.CONTENTFUL_ENVIRONMENT_ID
 ) {
   console.error("Couldn't load env");
 
@@ -24,7 +25,9 @@ console.log("Generating types...\n");
 execSync(
   `${getBinFile("cf-content-types-generator")} --spaceId ${
     process.env.CONTENTFUL_SPACE_ID
-  } --token ${process.env.CONTENTFUL_MANAGEMENT_TOKEN} -o ${typesDir} -X -d -g`,
+  } --token ${process.env.CONTENTFUL_MANAGEMENT_TOKEN} --environment ${
+    process.env.CONTENTFUL_ENVIRONMENT_ID
+  } -o ${typesDir} -X -d -g`,
   { stdio: [0, 1, 2] }
 );
 
