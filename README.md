@@ -1,6 +1,6 @@
 # Next.js static export with app router and Contentful integration
 
-This is an example repository for a [Next.js](http://nextjs.org) site using the app router, fetching data from [Contentful](https://www.contentful.com), and generating TypeScript types for the content model. It also includes setups for local previewing of unpublished Contentful content and automatic site generation when content changes in Contentful.
+This is an example repository for a static [Next.js](http://nextjs.org) site using the app router, fetching data from [Contentful](https://www.contentful.com), and generating TypeScript types for the content model. It also includes setups for local previewing of unpublished Contentful content and automatic site generation with GitHub Actions when content changes in Contentful.
 
 The repo is inspired by [this great article](https://maxschmitt.me/posts/nextjs-contentful-typescript) by Max Schmitt but I've made some major changes.
 
@@ -46,7 +46,9 @@ If you make changes to the content model in Contentful, you can run the followin
 npm run generate-types
 ```
 
-## Setting up content preview in Contentful
+## Setting up local content preview in Contentful
+
+Because the goal of this example repository is to have a static site without the Next.js server instance, we cannot use content preview in the deployed site. If you would rather use SSR and have the server instance running, you can follow [Max's article](https://maxschmitt.me/posts/nextjs-contentful-typescript) to set up content preview with Next.js's draft mode. In this example, we can preview the content using a locally running site. Of course, you could also deploy the preview site somewhere, but that setup is beyond our scope.
 
 In Contentful, go to `Settings -> Content preview`. Set the preview mode to `Preview in new tab`. Next, click `Add content preview`. Check all the content types and set URLs like this for each content type: `http://localhost:3000/[CONTENT_TYPE_ID in plural]/{entry.sys.id}`. Now you should be able to open unpublished content in localhost, just make sure that you have set the `CONTENTFUL_CONTENT_PREVIEW` as `true` and that the dev server or static build preview is running.
 
