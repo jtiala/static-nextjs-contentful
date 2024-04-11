@@ -1,28 +1,20 @@
 # Next.js static export with app router and Contentful integration
 
-This is an example repository for a Next.js site using the app router, fetching data from Contentful, and generating TypeScript types for the content model. It also includes setups for local previewing of unpublished Contentful content and automatic site generation when content changes in Contentful.
+This is an example repository for a [Next.js](http://nextjs.org) site using the app router, fetching data from [Contentful](https://www.contentful.com), and generating TypeScript types for the content model. It also includes setups for local previewing of unpublished Contentful content and automatic site generation when content changes in Contentful.
 
 The repo is inspired by [this great article](https://maxschmitt.me/posts/nextjs-contentful-typescript) by Max Schmitt but I've made some major changes.
 
-## Setting up Contentful
-
-If you want to run this project yourself, you'll need to create a new Contentful space. Also, create a new API key in `Settings -> API keys -> Add API key` and a personal access token in `Settings -> CMA Tokens -> Create personal access token`.
-
-Next, you can import the content model using the Contentful CLI:
-
-```bash
-contentful space import --space-id=CONTENTFUL_SPACE_ID --management-token=CONTENTFUL_MANAGEMENT_TOKEN --environment-id=master --content-file=contentful-content-model.json
-```
-
-For reference, you can export your content model using the following command:
-
-```bash
-contentful space export --space-id=CONTENTFUL_SPACE_ID --management-token=CONTENTFUL_MANAGEMENT_TOKEN --environment-id=master --skip-content --skip-roles --skip-webhooks --content-file=contentful-content-model.json
-```
-
 ## Running the site locally
 
-First, copy `.env.local.example` as `.env.local` and fill in your API keys from Contentful. If you want to include unpublished content in your build, set `CONTENTFUL_CONTENT_PREVIEW=true`. `BASE_PATH` should be left empty for local builds.
+If you want to run this project yourself, you'll need to create a new Contentful space first. Also, create a new API key in `Settings -> API keys -> Add API key` and a personal access token in `Settings -> CMA Tokens -> Create personal access token`.
+
+Next, copy `.env.local.example` as `.env.local` and fill in your API keys from Contentful. If you want to include unpublished content in your local build, set `CONTENTFUL_CONTENT_PREVIEW=true`. `BASE_PATH` should be left empty for local builds.
+
+Now you can import the included content model in your Contentful space. Use the following script:
+
+```bash
+npm run import-content-model contentful-content-model.json
+```
 
 Then, run the development server:
 

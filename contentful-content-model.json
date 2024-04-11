@@ -45,7 +45,8 @@
             "linkType": "User",
             "id": "3WUQQcC4T6x5SOhsOVxhGg"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/wrz8vkyn33iq/environments/master/content_types/club"
       },
       "displayField": "name",
       "name": "Club",
@@ -57,8 +58,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -86,8 +86,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -98,14 +97,12 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Symbol",
-            "validations": [
-            ]
+            "validations": []
           }
         },
         {
@@ -114,8 +111,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -125,8 +121,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -138,9 +133,7 @@
           "required": true,
           "validations": [
             {
-              "linkContentType": [
-                "league"
-              ]
+              "linkContentType": ["league"]
             }
           ],
           "disabled": false,
@@ -194,7 +187,8 @@
             "linkType": "User",
             "id": "3WUQQcC4T6x5SOhsOVxhGg"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/wrz8vkyn33iq/environments/master/content_types/player"
       },
       "displayField": "name",
       "name": "Player",
@@ -206,8 +200,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -217,8 +210,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -228,8 +220,7 @@
           "type": "Date",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -241,12 +232,7 @@
           "required": true,
           "validations": [
             {
-              "in": [
-                "Goalkeeper",
-                "Defender",
-                "Midfielder",
-                "Forward"
-              ]
+              "in": ["Goalkeeper", "Defender", "Midfielder", "Forward"]
             }
           ],
           "disabled": false,
@@ -293,8 +279,7 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -306,8 +291,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -320,9 +304,7 @@
           "required": false,
           "validations": [
             {
-              "linkContentType": [
-                "club"
-              ]
+              "linkContentType": ["club"]
             }
           ],
           "disabled": false,
@@ -335,8 +317,7 @@
           "type": "Boolean",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "defaultValue": {
             "en-US": false
           },
@@ -349,17 +330,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "club"
-                ]
+                "linkContentType": ["club"]
               }
             ],
             "linkType": "Entry"
@@ -412,7 +390,8 @@
             "linkType": "User",
             "id": "3WUQQcC4T6x5SOhsOVxhGg"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/wrz8vkyn33iq/environments/master/content_types/manager"
       },
       "displayField": "name",
       "name": "Manager",
@@ -424,8 +403,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -435,8 +413,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -446,8 +423,7 @@
           "type": "Date",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -492,8 +468,7 @@
               "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
             },
             {
-              "nodes": {
-              }
+              "nodes": {}
             }
           ],
           "disabled": false,
@@ -505,8 +480,7 @@
           "type": "Link",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "linkType": "Asset"
@@ -519,9 +493,7 @@
           "required": false,
           "validations": [
             {
-              "linkContentType": [
-                "club"
-              ]
+              "linkContentType": ["club"]
             }
           ],
           "disabled": false,
@@ -536,12 +508,7 @@
           "required": false,
           "validations": [
             {
-              "in": [
-                "Manager",
-                "Assistant Manager",
-                "Head Coach",
-                "Coach"
-              ]
+              "in": ["Manager", "Assistant Manager", "Head Coach", "Coach"]
             }
           ],
           "disabled": false,
@@ -553,17 +520,14 @@
           "type": "Array",
           "localized": false,
           "required": false,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false,
           "items": {
             "type": "Link",
             "validations": [
               {
-                "linkContentType": [
-                  "club"
-                ]
+                "linkContentType": ["club"]
               }
             ],
             "linkType": "Entry"
@@ -616,7 +580,8 @@
             "linkType": "User",
             "id": "3WUQQcC4T6x5SOhsOVxhGg"
           }
-        }
+        },
+        "urn": "crn:contentful:::content:spaces/wrz8vkyn33iq/environments/master/content_types/league"
       },
       "displayField": "name",
       "name": "League",
@@ -628,8 +593,7 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         },
@@ -639,16 +603,14 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
-          "validations": [
-          ],
+          "validations": [],
           "disabled": false,
           "omitted": false
         }
       ]
     }
   ],
-  "tags": [
-  ],
+  "tags": [],
   "editorInterfaces": [
     {
       "sys": {
